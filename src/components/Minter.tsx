@@ -39,8 +39,8 @@ const Minter: React.FC = () => {
     async (polkadotApi: any, joeyAddress: any, joey: any) => {
       try {
         let tx1 = polkadotApi.tx.balances.transferKeepAlive(joeyAddress, 0);
-        let tx2 = polkadotApi.tx.system.remark(
-          '{"p":"dot-20","op":"mint","tick":"DOTA"}'
+        let tx2 = polkadotApi.tx.system.remark_with_event(
+          '{"p":"PRC-20","op":"mint","tick":"DOTS","amt":"1000"}'
         );
         let tx3 = await polkadotApi.tx.utility
           .batchAll([tx1, tx2])
