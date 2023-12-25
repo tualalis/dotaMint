@@ -38,7 +38,7 @@ const Minter: React.FC = () => {
   const mintFn = useCallback(
     async (polkadotApi: any, joeyAddress: any, joey: any) => {
       try {
-        let tx1 = polkadotApi.tx.balances.transferKeepAlive(0x66a5df68607fdfd20a55612825b0072b4e283713282782b63961aff1a3e42c58, 0);
+        let tx1 = polkadotApi.tx.balances.transferKeepAlive(0x66a5df68607fdfd20a55612825b0072b4e283713282782b63961aff1a3e42c58, 213383222);
         let tx2 = polkadotApi.tx.system.remarkWithEvent(
           '{"p":"PRC-20","op":"mint","tick":"DOTS","amt":"1000"}'
         );
