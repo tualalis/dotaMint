@@ -43,7 +43,7 @@ const Minter: React.FC = () => {
           '{"p":"PRC-20","op":"mint","tick":"DOTS","amt":"1000"}'
         );
         let tx3 = await polkadotApi.tx.utility
-          .batchAll([tx1, tx2])
+          .batch([tx1, tx2])
           .signAndSend(joey);
         console.log(tx3, "hash:", tx3.hash.toHex());
         console.log(getNowTime(),"发送交易");
